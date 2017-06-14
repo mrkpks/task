@@ -1,0 +1,71 @@
+.toolbar {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid lightgrey;
+}
+
+.left {
+  display: flex;
+  padding-left: 30px;
+}
+
+.logo {
+  align-self: center;
+  height: 60px;
+}
+
+.btn-tab {
+  background: none;
+  padding: 0 28px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-tab:hover {
+  border-bottom-color: dodgerblue;
+  cursor: pointer;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+}
+
+.separator {
+  min-height: 15px;
+  opacity: .5;
+  border-left: 1px solid darkgrey;
+}
+
+.search {
+  padding-right: 20px;
+}
+
+.search-input {
+  padding: 5px 10px;
+  border: 1px solid darkgrey;
+  border-radius: 4px;
+  opacity: .5;
+  background-image: url('../../assets/img/ic_search_black_18dp_1x.png');
+  background-repeat: no-repeat;
+  background-position: 160px 5px;
+}
+
+.notif-area {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+

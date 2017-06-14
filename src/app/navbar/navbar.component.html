@@ -1,0 +1,64 @@
+<div class="navbar">
+  <div class="top">
+    <p class="nav-text">Filter Results</p>
+    <p class="nav-upper">WHAT AGE RANGE ARE YOU SEEKING?</p>
+    <div class="slider">
+      <p>18</p>
+      <input type="range"  min="18" max="70" value="42" step="5">
+      <p>70</p>
+      <div class="separator"></div>
+      <p>24 - 31</p>
+    </div>
+    <p class="nav-upper">WHAT GENDER ARE YOU SEEKING</p>
+    <div class="menu">
+      <p>Male & Female</p>
+      <i class="material-icons md-18">keyboard_arrow_down</i>
+    </div>
+    <!--<select class="menu">-->
+      <!--<option value="male-female">Male & Female</option>-->
+      <!--<option value="male">Male</option>-->
+      <!--<option value="female">Female</option>-->
+    <!--</select>-->
+    <p class="nav-upper">WHAT GENDER ARE YOU SEEKING</p>
+    <div class="search">
+      <input class="search-input" placeholder="e.g Fashion or Style" type="text">
+    </div>
+    <div class="nav-options">
+      <button class="btn-option">
+        <span class="">FASHION</span>
+      </button>
+      <button class="btn-option">
+        <span>TRAVEL</span>
+      </button>
+      <button class="btn-option">
+        <span>GLAMOUR</span>
+      </button>
+    </div>
+    <button class="btn-submit" type="submit">SEARCH</button>
+  </div>
+  <div class="bottom">
+    <p class="nav-footer-upper">YOUR SHORTLIST</p>
+    <div class="nav-shortlist-container">
+      <div *ngFor="let item of shortlist" class="nav-shortlist-item">
+        <img [src]="item.thumbnail" alt="thumb">
+        <div class="nav-shortlist-item-info">
+          <p class="item-name">{{item.name}}</p>
+          <p class="item-price">{{item.amount | currency:'USD':true:'1.0-0'}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="nav-shortlist-footer">
+      <div class="nav-total">
+        <div class="nav-footer-upper">CURRENT TOTAL:</div>
+        <div class="nav-price-total">599 USD</div>
+      </div>
+      <div class="nav-proceed">
+        <span class="text">Proceed</span>
+        <i class="material-icons md-18">keyboard_arrow_right</i>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

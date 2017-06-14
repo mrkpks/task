@@ -1,1 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body, input, button, a {
+  color: slategrey;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+//a {color: black;}      /* unvisited link */
+//a:visited {color: black;}  /* visited link */
+//a:hover {color: gray;}  /* mouse over link */
+//a:active {color: gray;}  /* selected link */

@@ -1,0 +1,46 @@
+<div class="panel">
+  <div class="panel-image">
+    <img [src]="model.panelImage" alt="panel-img">
+  </div>
+  <div class="panel-description">
+    <div class="panel-info-top">
+      <div class="bold-small">
+        {{model.name}}
+      </div>
+      <div class="ambassador-other">
+        <p class="normal-smaller">
+          Age: {{model.age}}
+        </p>
+        <div class="separator"></div>
+        <p class="normal-smaller">
+          Location: {{model.location}}
+        </p>
+      </div>
+    </div>
+    <div class="horizontal"></div>
+    <div class="panel-info-bottom">
+      <div class="ambassador-cost">
+        <p class="bold-small">
+          {{model.amount | currency:'USD':true:'1.0-0'}}
+        </p>
+        <p class="normal-smaller">
+          Cost Per Post
+        </p>
+      </div>
+      <div class="ambassador-contact">
+        <div *ngIf="model.fb" class="social-fb">
+        <img class="icon-social" src="../../assets/img/icon_fb.png" alt="social">
+        </div>
+        <div *ngIf="model.twitter" class="social-twitter">
+        <img class="icon-social" src="../../assets/img/icon_twitter.png" alt="social">
+        </div>
+        <div *ngIf="model.insta" class="social-insta">
+        <img class="icon-social" src="../../assets/img/icon_insta.png" alt="social">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="drawEmpty" class="panel"></div>
+<div *ngIf="drawEmpty" class="panel"></div>

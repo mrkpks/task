@@ -1,0 +1,27 @@
+.dashboard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-toolbar-container {
+  flex-basis: 60px;
+  flex-shrink: 0;
+}
+
+.body {
+  display: flex;
+  flex-basis: 100%;
+  //max-height: calc(100vh - 130px);
+}
+
+.navbar-container {
+  flex-basis: 330px;
+  flex-shrink: 0;
+}
+
+.content-container {
+  background-color: lightgrey;
+  flex-basis: 100%;
+  overflow: auto;
+}
