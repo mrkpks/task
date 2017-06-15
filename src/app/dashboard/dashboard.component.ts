@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SHORTLIST } from "../ambassadors-data";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute, Params } from "@angular/router";
+import { AmbassadorsService } from "../ambassadors.service";
+import { Ambassador } from "../ambassador";
 
 @Component({
   selector: 'app-dashboard',
@@ -9,9 +10,20 @@ import { Router } from "@angular/router";
 })
 export class DashboardComponent implements OnInit {
 
-  ambassadors = SHORTLIST;
+  ambassadors: Ambassador[] = this.ambassadorsService.getShortlist();
+  showDetail: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private ambassadorsService: AmbassadorsService,
+              private route: ActivatedRoute) {
+    this.route.params.subscribe(
+      (params: Params) => {
+        if (params['id']) {
+          this.showDetail = true;
+        }
+      }
+    );
+  }
 
   ngOnInit() {
 

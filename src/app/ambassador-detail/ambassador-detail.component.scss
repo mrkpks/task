@@ -1,14 +1,3 @@
-
-.ambassador-detail-overlay {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #AAA;
-  overflow: hidden;
-}
-
 .ambassador-detail {
   height: 80%;
   width: auto;
@@ -20,6 +9,7 @@
   border-radius: 1%;
   padding: 5%;
   margin: 0 5%;
+  overflow: auto;
 }
 
 .toptop {
@@ -37,18 +27,32 @@
 }
 
 .top-left {
-  height: 100%;
+  min-height: 100%;
   width: 45%;
   padding-right: 5%;
 }
 
 .top-right {
-  height: 100%;
+  min-height: 100%;
   width: 45%;
   padding-left: 5%;
+}
+
+.detail-form {
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-control {
+  width: 70%;
 }
 
 .btn-back {

@@ -1,6 +1,7 @@
 export interface Ambassador {
   id: number;
   name?: string;
+  gender?: string;
   thumbnail?: string;
   panelImage?: string;
   amount?: number;

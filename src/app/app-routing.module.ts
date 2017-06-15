@@ -12,7 +12,7 @@ import { AmbassadorDetailComponent } from "./ambassador-detail/ambassador-detail
 const appRoutes: Routes = [
   { path: '', redirectTo: '/ambassadors', pathMatch: 'full' },
   { path: 'ambassadors', component: DashboardComponent },
-  { path: 'ambassadors/:id/detail', component: AmbassadorDetailComponent },
+  { path: 'ambassadors/:id/detail', component: DashboardComponent },
   { path: 'campaigns', component: CampaignsComponent },
   { path: 'payments', component: PaymentsComponent },
   { path: 'support', component: SupportComponent },
