@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { PanelComponent } from './panel/panel.component';
-import { ContentComponent } from './content/content.component';
 import { PageToolbarComponent } from './page-toolbar/page-toolbar.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { ErrorPageComponent } from './error-page/error-page.component';
@@ -16,6 +15,8 @@ import { CampaignsComponent } from './campaigns/campaigns.component';
 import { PaymentsComponent } from './payments/payments.component';
 import { SupportComponent } from './support/support.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AmbassadorDetailComponent } from './ambassador-detail/ambassador-detail.component';
+import { AmbassadorsService } from "./ambassadors.service";
 
 @NgModule({
   declarations: [
@@ -23,14 +24,14 @@ import { MessagesComponent } from './messages/messages.component';
     ToolbarComponent,
     NavbarComponent,
     PanelComponent,
-    ContentComponent,
     PageToolbarComponent,
     ErrorPageComponent,
     DashboardComponent,
     CampaignsComponent,
     PaymentsComponent,
     SupportComponent,
-    MessagesComponent
+    MessagesComponent,
+    AmbassadorDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,7 @@ import { MessagesComponent } from './messages/messages.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AmbassadorsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

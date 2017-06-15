@@ -8,6 +8,7 @@
 
 .left {
   display: flex;
+  align-items: center;
   padding-left: 30px;
 }
 
@@ -18,17 +19,25 @@
 
 .btn-tab {
   background: none;
+  height: 100%;
   padding: 0 28px;
   border: none;
   border-bottom: 2px solid transparent;
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 }
 
 .btn-tab:hover {
   border-bottom-color: dodgerblue;
   cursor: pointer;
+}
+
+.btn-tab-active {
+  border-bottom-color: dodgerblue;
+  color: black;
+  font-weight: bold;
 }
 
 .right {

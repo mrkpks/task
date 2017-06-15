@@ -2,6 +2,7 @@ import { Ambassador } from './ambassador';
 
 export const SHORTLIST: Ambassador[] = [
   {
+    id: 1,
     name: 'Mark & Jason Kim',
     thumbnail: '../assets/img/thumb_mark_jason_kim.png',
     panelImage: '../assets/img/panel_mark_jason_kim.png',
@@ -13,6 +14,7 @@ export const SHORTLIST: Ambassador[] = [
     insta: true
   },
   {
+    id: 2,
     name: 'Brian Wheeler',
     thumbnail: '../assets/img/thumb_brian_wheeler.png',
     panelImage: 'https://placeimg.com/330/190/animals',
@@ -24,6 +26,7 @@ export const SHORTLIST: Ambassador[] = [
     insta: true
   },
   {
+    id: 3,
     name: 'Isabella Singleton',
     thumbnail: '../assets/img/thumb_isabella_singleton.png',
     panelImage: 'https://placeimg.com/330/190/people',
@@ -35,6 +38,7 @@ export const SHORTLIST: Ambassador[] = [
     insta: true
   },
   {
+    id: 4,
     name: 'Evan Garcia',
     thumbnail: '../assets/img/thumb_evan_garcia.png',
     panelImage: 'https://placeimg.com/330/190/people/sepia',
@@ -46,6 +50,7 @@ export const SHORTLIST: Ambassador[] = [
     insta: false
   },
   {
+    id: 5,
     name: 'Beatrice Waters',
     thumbnail: '../assets/img/thumb_beatrice_waters.png',
     panelImage: 'https://placeimg.com/330/190/people/grayscale',
@@ -57,6 +62,7 @@ export const SHORTLIST: Ambassador[] = [
     insta: true
   },
   {
+    id: 6,
     name: 'Hulda Fuller',
     thumbnail: '../assets/img/thumb_hulda_fuller.png',
     panelImage: '../assets/img/panel_hulda_fuller.png',

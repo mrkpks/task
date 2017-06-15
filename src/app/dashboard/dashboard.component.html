@@ -7,7 +7,14 @@
       <app-navbar></app-navbar>
     </div>
     <div class="content-container">
-      <app-content></app-content>
+      <div class="content">
+        <div *ngFor="let ambassador of ambassadors"
+             class="panel-container"
+             (click)="onLoadAmbassador(ambassador.id)">
+          <app-panel [model]="ambassador"></app-panel>
+        </div>
+        <div *ngFor="let x of [0, 0, 0, 0, 0]" class="panel-container-empty"></div>
+      </div>
     </div>
   </div>
 </div>

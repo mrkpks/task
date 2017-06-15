@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SHORTLIST } from "../ambassadors-data";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  ambassadors = SHORTLIST;
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
+
+  }
+
+  onLoadAmbassador(id: number) {
+    this.router.navigateByUrl(`/ambassadors/${id}/detail`);
   }
 
 }

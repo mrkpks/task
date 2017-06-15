@@ -50,15 +50,14 @@
     <div class="nav-shortlist-footer">
       <div class="nav-total">
         <div class="nav-footer-upper">CURRENT TOTAL:</div>
-        <div class="nav-price-total">599 USD</div>
+        <div class="nav-price-total">{{ total }} USD</div>
       </div>
-      <div class="nav-proceed">
+      <button class="nav-proceed" (click)="onProceed()">
         <span class="text">Proceed</span>
         <i class="material-icons md-18">keyboard_arrow_right</i>
-      </div>
+      </button>
     </div>
   </div>
-
 </div>
 
 

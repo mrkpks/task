@@ -183,4 +183,11 @@
   font-size: x-small;
   font-weight: bolder;
   color: black;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.nav-proceed:hover {
+  cursor: pointer;
 }
