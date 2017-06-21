@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from "@angular/http";
 import { AppRoutingModule } from "./app-routing.module";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -19,7 +19,7 @@ import { AmbassadorDetailComponent } from './ambassador-detail/ambassador-detail
 import { AmbassadorsService } from "./ambassadors.service";
 import { StoreModule } from "@ngrx/store";
 import { ambassadorReducer } from "./reducers/ambassador.reducer";
-import {AppState} from "./app.state";
+import { ShortlistItemComponent } from './navbar/shortlist-item/shortlist-item.component';
 
 
 @NgModule({
@@ -35,12 +35,14 @@ import {AppState} from "./app.state";
     PaymentsComponent,
     SupportComponent,
     MessagesComponent,
-    AmbassadorDetailComponent
+    AmbassadorDetailComponent,
+    ShortlistItemComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule,
     StoreModule.provideStore({
       ambassadors: ambassadorReducer

@@ -8,7 +8,7 @@
     </div>
     <div class="content-container">
       <div class="content">
-        <div *ngFor="let ambassador of ambassadors"
+        <div *ngFor="let ambassador of ambassadors | async"
              class="panel-container"
              (click)="onLoadAmbassador(ambassador.id)">
           <app-panel [model]="ambassador"></app-panel>
@@ -21,3 +21,4 @@
 <div *ngIf="showDetail" class="ambassador-detail-overlay">
   <app-ambassador-detail></app-ambassador-detail>
 </div>
+

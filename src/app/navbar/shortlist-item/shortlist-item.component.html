@@ -1,0 +1,7 @@
+<div class="shortlist-item">
+  <img [src]="shortlistItem.thumbnail" alt="thumb">
+  <div class="nav-shortlist-item-info">
+    <p class="item-name">{{ shortlistItem.name }}</p>
+    <p class="item-price">{{ shortlistItem.amount | currency:'USD':true:'1.0-0' }}</p>
+  </div>
+</div>

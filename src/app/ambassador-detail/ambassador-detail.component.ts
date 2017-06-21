@@ -23,6 +23,7 @@ export class AmbassadorDetailComponent implements OnDestroy {
     this.detailForm = this.fb.group({
       name: '',
       age: '',
+      amount: '',
       gender: ''
     });
 
@@ -32,6 +33,7 @@ export class AmbassadorDetailComponent implements OnDestroy {
         this.detailForm.setValue({
           name: this.ambassador.name,
           age: this.ambassador.age,
+          amount: this.ambassador.amount,
           gender: this.ambassador.gender
         });
       }
@@ -46,7 +48,7 @@ export class AmbassadorDetailComponent implements OnDestroy {
   onSubmit() {
     this.store.dispatch({
       type: ambassadorActions.UPDATE,
-      payload: {...this.detailForm.value, id: this.ambassador.id}
+      payload: {...this.detailForm.value, id: this.ambassador.id, amount: Number(this.detailForm.value.amount)}
     })
   }
 }

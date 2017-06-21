@@ -10,16 +10,16 @@
       <p>24 - 31</p>
     </div>
     <p class="nav-upper">WHAT GENDER ARE YOU SEEKING</p>
-    <div class="menu">
-      <p>Male & Female</p>
-      <i class="material-icons md-18">keyboard_arrow_down</i>
-    </div>
-    <!--<select class="menu">-->
-      <!--<option value="male-female">Male & Female</option>-->
-      <!--<option value="male">Male</option>-->
-      <!--<option value="female">Female</option>-->
-    <!--</select>-->
-    <p class="nav-upper">WHAT GENDER ARE YOU SEEKING</p>
+    <!--<div class="menu">-->
+      <!--<p>Male & Female</p>-->
+      <!--<i class="material-icons md-18">keyboard_arrow_down</i>-->
+    <!--</div>-->
+    <select class="menu" [(ngModel)]="gender">
+      <option *ngFor="let option of genderOptions" [value]="option.key">
+        <span class="option-value">{{ option.value }}</span>
+      </option>
+    </select>
+    <p class="nav-upper">WHAT INTEREST ARE YOU SEEKING</p>
     <div class="search">
       <input class="search-input" placeholder="e.g Fashion or Style" type="text">
     </div>
@@ -39,12 +39,8 @@
   <div class="bottom">
     <p class="nav-footer-upper">YOUR SHORTLIST</p>
     <div class="nav-shortlist-container">
-      <div *ngFor="let item of shortlist" class="nav-shortlist-item">
-        <img [src]="item.thumbnail" alt="thumb">
-        <div class="nav-shortlist-item-info">
-          <p class="item-name">{{item.name}}</p>
-          <p class="item-price">{{item.amount | currency:'USD':true:'1.0-0'}}</p>
-        </div>
+      <div *ngFor="let item of shortList" class="shortlist-item-container">
+        <app-shortlist-item [shortlistItem]="item"></app-shortlist-item>
       </div>
     </div>
     <div class="nav-shortlist-footer">

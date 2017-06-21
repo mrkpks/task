@@ -1,21 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, ActivatedRoute, Params } from "@angular/router";
-import { AmbassadorsService } from "../ambassadors.service";
 import { Ambassador } from "../ambassador";
+import { Store } from "@ngrx/store";
+import { AppState } from "../app.state";
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
 
-  ambassadors: Ambassador[] = this.ambassadorsService.getShortlist();
   showDetail: boolean = false;
+  ambassadors: Observable<Ambassador[]>;
 
   constructor(private router: Router,
-              private ambassadorsService: AmbassadorsService,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private store: Store<AppState>) {
     this.route.params.subscribe(
       (params: Params) => {
         if (params['id']) {
@@ -23,14 +25,10 @@ export class DashboardComponent implements OnInit {
         }
       }
     );
-  }
-
-  ngOnInit() {
-
+    this.ambassadors = this.store.select('ambassadors');
   }
 
   onLoadAmbassador(id: number) {
     this.router.navigateByUrl(`/ambassadors/${id}/detail`);
   }
-
 }
