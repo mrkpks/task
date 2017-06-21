@@ -1,0 +1,9 @@
+<div class="select">
+  <div class="selector" (click)="onSelectClicked(gender)" [ngClass]="{clicked: selectClicked}">
+    <p>{{ gender.value }}</p>
+    <i class="arrow-icon material-icons md-18">keyboard_arrow_down</i>
+  </div>
+  <div *ngIf="selectClicked" class="options">
+    <span *ngFor="let item of genders" class="option-value" (click)="onSelectClicked(item)">{{ item.value }}</span>
+  </div>
+</div>

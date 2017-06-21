@@ -41,21 +41,10 @@
   border-left: 1px solid lightgrey;
 }
 
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid lightgrey;
-  border-radius: 4px;
-  padding: 5px 10px;
-  color: black;
-  font-size: small;
-  font-weight: bold;
-  opacity: .9;
-}
-
-.menu:hover {
-  cursor: pointer;
+.select-container {
+  flex-basis: 100%;
+  position: relative;
+  display: inline-block;
 }
 
 .search-input {
@@ -64,7 +53,7 @@
   border: 1px solid darkgrey;
   border-radius: 4px;
   opacity: .5;
-  background-image: url('../../assets/img/ic_search_black_18dp_1x.png');
+  background-image: url('../../../assets/img/ic_search_black_18dp_1x.png');
   background-repeat: no-repeat;
   background-position: 240px 5px;
 }

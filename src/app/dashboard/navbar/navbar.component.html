@@ -14,11 +14,14 @@
       <!--<p>Male & Female</p>-->
       <!--<i class="material-icons md-18">keyboard_arrow_down</i>-->
     <!--</div>-->
-    <select class="menu" [(ngModel)]="gender">
-      <option *ngFor="let option of genderOptions" [value]="option.key">
-        <span class="option-value">{{ option.value }}</span>
-      </option>
-    </select>
+    <div class="select-container">
+      <app-select [(gender)]="selectedGender" [genders]="genderOptions"></app-select>
+    </div>
+    <!--<select class="menu" [(ngModel)]="gender">-->
+      <!--<option *ngFor="let option of genderOptions" [value]="option.key">-->
+        <!--<span class="option-value">{{ option.value }}</span>-->
+      <!--</option>-->
+    <!--</select>-->
     <p class="nav-upper">WHAT INTEREST ARE YOU SEEKING</p>
     <div class="search">
       <input class="search-input" placeholder="e.g Fashion or Style" type="text">

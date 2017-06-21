@@ -1,16 +1,16 @@
 import { Component, OnDestroy } from '@angular/core';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { Store } from "@ngrx/store";
-import { AppState } from "../app.state";
-import { ambassadorActions } from "../reducers/ambassador.reducer";
+import { AppState } from "../../app.state";
+import { ambassadorActions } from "../../reducers/ambassador.reducer";
 import { ActivatedRoute, Params } from "@angular/router";
 import { Observable, Subject } from "rxjs";
-import { Ambassador } from "../ambassador";
+import { Ambassador } from "../../ambassador";
 
 @Component({
   selector: 'app-ambassador-detail',
-  templateUrl: './ambassador-detail.component.html',
-  styleUrls: ['./ambassador-detail.component.scss']
+  templateUrl: 'ambassador-detail.component.html',
+  styleUrls: ['ambassador-detail.component.scss']
 })
 export class AmbassadorDetailComponent implements OnDestroy {
 

@@ -1,0 +1,64 @@
+$border-color: #d0d0d0;
+
+.select {
+  height: 100%;
+  width: 100%;
+  user-select: none;
+}
+
+.selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  padding: 5px 10px;
+  color: black;
+  font-size: .8em;
+  opacity: .9;
+  cursor: pointer;
+
+  &:hover:not(.clicked) {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
+  &.clicked {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: #ffffff;
+  }
+}
+
+.arrow-icon {
+  transition: transform 0.2s;
+
+  .clicked & {
+    transform: rotate(180deg);
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  z-index: 65535;
+  border: 1px solid $border-color;
+  border-radius: 4px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
+  cursor: pointer;
+}
+
+.option-value {
+  padding: 10px;
+  font-size: small;
+}
+
+.option-value:hover {
+  background-color: #f1f1f1;
+}
+
