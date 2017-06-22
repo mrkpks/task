@@ -1,13 +1,12 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
-import { ErrorPageComponent } from "./error-page/error-page.component";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { CampaignsComponent } from "./campaigns/campaigns.component";
-import { PaymentsComponent } from "./payments/payments.component";
-import { SupportComponent } from "./support/support.component";
-import { MessagesComponent } from "./messages/messages.component";
-import { AmbassadorDetailComponent } from "./dashboard/ambassador-detail/ambassador-detail.component";
+import { ErrorPageComponent } from './error-page/error-page.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { CampaignsComponent } from './campaigns/campaigns.component';
+import { PaymentsComponent } from './payments/payments.component';
+import { SupportComponent } from './support/support.component';
+import { MessagesComponent } from './messages/messages.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/ambassadors', pathMatch: 'full' },

@@ -1,11 +1,11 @@
 import { Component, OnDestroy } from '@angular/core';
-import { FormGroup, FormBuilder } from "@angular/forms";
-import { Store } from "@ngrx/store";
-import { AppState } from "../../app.state";
-import { ambassadorActions } from "../../reducers/ambassador.reducer";
-import { ActivatedRoute, Params } from "@angular/router";
-import { Observable, Subject } from "rxjs";
-import { Ambassador } from "../../ambassador";
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../app.state';
+import { ambassadorActions } from '../../reducers/ambassador.reducer';
+import { ActivatedRoute, Params } from '@angular/router';
+import { Observable, Subject } from 'rxjs';
+import { Ambassador } from '../../ambassador';
 
 @Component({
   selector: 'app-ambassador-detail',
@@ -15,7 +15,7 @@ import { Ambassador } from "../../ambassador";
 export class AmbassadorDetailComponent implements OnDestroy {
 
   detailForm: FormGroup;
-  genders: String[] = ['male', 'female'];
+  genders: string[] = ['male', 'female'];
   ambassador: Ambassador;
   private unsubscribe$ = new Subject<void>();
 
@@ -40,15 +40,15 @@ export class AmbassadorDetailComponent implements OnDestroy {
     );
   }
 
-  ngOnDestroy() {
+  ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();
   }
 
-  onSubmit() {
+  onSubmit(): void {
     this.store.dispatch({
       type: ambassadorActions.UPDATE,
       payload: {...this.detailForm.value, id: this.ambassador.id, amount: Number(this.detailForm.value.amount)}
-    })
+    });
   }
 }

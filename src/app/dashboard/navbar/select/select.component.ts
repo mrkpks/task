@@ -1,32 +1,28 @@
-import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Gender } from "../../../genders";
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Gender } from '../../../genders';
 
 @Component({
   selector: 'app-select',
   templateUrl: 'select.component.html',
   styleUrls: ['select.component.scss']
 })
-export class SelectComponent implements OnInit {
+export class SelectComponent {
 
   @Input() gender: Gender;
   @Input() genders: Gender[];
   @Output() genderChange: EventEmitter<Gender>;
 
-  selectClicked: boolean = false;
+  selectClicked = false;
 
   constructor() {
     this.genderChange = new EventEmitter<Gender>();
   }
 
-  ngOnInit() {
 
-  }
-
-  onSelectClicked(gender: Gender) {
+  onSelectClicked(gender: Gender): void {
     if (this.selectClicked === true) {
       this.selectClicked = false;
-    }
-    else {
+    } else {
       this.selectClicked = true;
     }
 

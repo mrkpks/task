@@ -36,7 +36,7 @@
 
 .content-container {
   height: 100%;
-  background-color: lightgrey;
+  background-color: #d3d3d3;
   flex-basis: 100%;
   overflow: auto;
 }
@@ -61,7 +61,7 @@
 }
 
 .panel-container-empty {
-  max-height: 0px;
+  max-height: 0;
   width: 330px;
   flex-shrink: 0;
 }

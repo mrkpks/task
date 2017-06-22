@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
-import { Store } from "@ngrx/store";
-import { Ambassador } from "../../ambassador";
-import { AppState } from "../../app.state";
-import { BehaviorSubject } from "rxjs";
-import { GENDERS, Gender } from "../../genders";
+import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { Ambassador } from '../../ambassador';
+import { AppState } from '../../app.state';
+import { GENDERS, Gender } from '../../genders';
 
 @Component({
   selector: 'app-navbar',
@@ -18,8 +17,6 @@ export class NavbarComponent {
   genderOptions = GENDERS;
 
   selectedGender: Gender = {key: 'both', value: 'Male & Female'};
-
-  // private refresh$ = new BehaviorSubject<null>(null);
 
   constructor(private router: Router,
               private store: Store<AppState>) {
@@ -40,16 +37,7 @@ export class NavbarComponent {
     return this.shortList.reduce((acc, val) => acc + val.amount, 0);
   }
 
-  onProceed() {
+  onProceed(): void {
     this.router.navigate(['/payments']);
   }
-
-  // get gender(): string {
-  //   return this.selectedGender;
-  // }
-  //
-  // set gender(gender: string) {
-  //   this.selectedGender = gender;
-  //   this.refresh$.next(null);
-  // }
 }

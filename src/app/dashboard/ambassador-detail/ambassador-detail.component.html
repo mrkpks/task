@@ -36,11 +36,12 @@
             class="form-control">
         </div>
         <div class="radio" *ngFor="let gender of genders">
-          <label>
+          <label class="radio-input">
             <input
               type="radio"
               formControlName="gender"
-              [value]="gender">{{ gender }}
+              [value]="gender">
+            <span class="radio-value">{{ gender }}</span>
           </label>
         </div>
         <button class="btn-submit" type="submit">Submit</button>
@@ -48,11 +49,11 @@
     </div>
   </div>
   <div class="bottom">
-    <h3>{{ ambassador?.name }}</h3>
-    <h4>Brief info</h4>
+    <h3 class="heading-name">{{ ambassador?.name }}</h3>
+    <h4 class="heading-info">Brief info</h4>
     <p class="brief">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Et harum quidem rerum facilis est et
       expedita distinctio. Duis condimentum augue id magna semper rutrum.</p>
-    <h4>Biography</h4>
+    <h4 class="heading-info">Biography</h4>
     <p class="biography">Fusce consectetuer risus a nunc. Nulla turpis magna, cursus sit amet, suscipit a, interdum id, felis.
       Nullam at arcu a est sollicitudin euismod. Mauris suscipit, ligula sit amet pharetra semper, nibh ante
       cursus purus, vel sagittis velit mauris vel metus. Morbi imperdiet, mauris ac auctor dictum, nisl ligula

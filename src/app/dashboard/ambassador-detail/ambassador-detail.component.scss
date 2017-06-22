@@ -1,11 +1,15 @@
+$headings-color: #4f4f4f;
+$background-color: #d3d3d3;
+$border-color: #a9a9a9;
+
 .ambassador-detail {
   height: 80%;
   width: auto;
   max-height: 900px;
   display: flex;
   flex-direction: column;
-  background-color: lightgrey;
-  border: 1px solid darkgrey;
+  background-color: $background-color;
+  border: 1px solid $border-color;
   border-radius: 1%;
   padding: 5%;
   margin: 0 5%;
@@ -16,14 +20,13 @@
   height: 5%;
   display: flex;
   flex-direction: row-reverse;
-
 }
 
 .top {
   height: 30%;
   width: 100%;
   display: flex;
-
+  padding-bottom: 10px;
 }
 
 .top-left {
@@ -49,17 +52,54 @@
 .form-group {
   display: flex;
   justify-content: space-between;
+  color: $headings-color;
+  font-weight: 600;
 }
 
 .form-control {
   width: 70%;
+  border: none;
+  border-radius: 20px;
+  padding: 5px;
+  outline: none;
+}
+
+.radio {
+  padding: 10px;
+  color: $headings-color;
+  font-size: smaller;
+  font-weight: 600;
+}
+
+.radio-input {
+  display: flex;
+  align-items: center;
+}
+
+.radio-value {
+  padding-left: 5px;
+}
+
+.btn-submit {
+  outline: none;
+  padding: 5px;
+  color: $headings-color;
+  font-weight: 600;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 20px;
+
+  &:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
 }
 
 .btn-back {
   outline: none;
   background: none;
   border: none;
-  color: white;
+  color: #ffffff;
 }
 
 .btn-back:hover {
@@ -74,8 +114,8 @@
 }
 
 .info {
-  color: #444;
-  font-weight: bold;
+  color: $headings-color;
+  font-weight: 600;
 }
 
 .bottom {
@@ -87,15 +127,12 @@
   overflow: hidden;
 }
 
-.brief {
-  //padding-bottom: 1%;
-}
-
 .biography {
   overflow: auto;
-  //padding: 1% 0;
 }
 
-h3, h4 {
-  color: #444;
+.heading-name, .heading-info {
+  color: $headings-color;
+  padding: 15px 0;
 }
+

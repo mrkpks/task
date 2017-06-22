@@ -8,11 +8,10 @@
 .top {
   display: flex;
   flex-direction: column;
-  //flex-grow: 1;
   justify-content: space-between;
   max-height: 65%;
   padding: 30px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid #d3d3d3;
   flex-shrink: 0;
 }
 
@@ -28,17 +27,16 @@
 .slider {
   display: flex;
   justify-content: space-between;
-  font-size: smaller;
-  display: flex;
   align-items: center;
+  font-size: smaller;
 }
 
 .separator {
   min-width: 1px;
   min-height: 15px;
   max-height: 15px;
-  opacity: .5;
-  border-left: 1px solid lightgrey;
+  opacity: 0.5;
+  border-left: 1px solid #d3d3d3;
 }
 
 .select-container {
@@ -50,12 +48,16 @@
 .search-input {
   width: 270px;
   padding: 5px 10px;
-  border: 1px solid darkgrey;
+  border: 1px solid #a9a9a9;
   border-radius: 4px;
-  opacity: .5;
+  opacity: 0.5;
   background-image: url('../../../assets/img/ic_search_black_18dp_1x.png');
   background-repeat: no-repeat;
   background-position: 240px 5px;
+
+  &:hover {
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.4);
+  }
 }
 
 .nav-options {
@@ -65,30 +67,37 @@
 }
 
 .btn-option {
-  color: white;
-  border: 1px solid lightgrey;
+  outline: none;
+  color: #ffffff;
+  border: 1px solid #d3d3d3;
   border-radius: 4px;
   padding: 5px;
   margin-right: 8px;
   font-size: x-small;
-  background-color: lightgrey;
-  opacity: .8;
-}
+  background-color: #d3d3d3;
+  opacity: 0.8;
 
-.btn-option:hover {
-  cursor: pointer;
-  background-color: slategrey;
-  //padding: 7px;
+  &:hover {
+    cursor: pointer;
+    border-color: #708090;
+    background-color: #708090;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+  }
 }
 
 .btn-submit {
-  color: white;
-  border: 1px solid black;
+  color: #ffffff;
+  border: 1px solid #000000;
   border-radius: 4px;
   padding: 5px;
   text-align: center;
-  background-color: black;
-  opacity: .8;
+  background-color: #000000;
+  opacity: 0.8;
+
+  &:hover:not(.clicked) {
+    cursor: pointer;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.5);
+  }
 }
 
 .bottom {
@@ -101,14 +110,7 @@
 .nav-shortlist-container {
   display: flex;
   flex-direction: column;
-  //justify-content: space-between;
-  //flex-basis: 100%;
   overflow: auto;
-}
-
-.shortlist-item-container {
-  //flex-basis: 100%;
-  //flex-shrink: 0;
 }
 
 .nav-shortlist-footer {
@@ -116,7 +118,7 @@
   padding: 15px 0;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid #d3d3d3;
 }
 
 .nav-total {
@@ -132,17 +134,17 @@
 
 .nav-price-total {
   font-size: x-small;
-  font-weight: bolder;
-  color: black;
-  opacity: .8;
+  font-weight: 600;
+  color: #000000;
+  opacity: 0.8;
 }
 
 .nav-proceed {
   display: flex;
   align-items: center;
   font-size: x-small;
-  font-weight: bolder;
-  color: black;
+  font-weight: 600;
+  color: #000000;
   background: none;
   border: none;
   outline: none;

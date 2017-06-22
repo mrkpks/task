@@ -1,17 +1,10 @@
-import {Component, OnInit, Input} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-shortlist-item',
   templateUrl: 'shortlist-item.component.html',
   styleUrls: ['shortlist-item.component.scss']
 })
-export class ShortlistItemComponent implements OnInit {
-
+export class ShortlistItemComponent {
   @Input() shortlistItem;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

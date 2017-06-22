@@ -1,5 +1,5 @@
-import { Ambassador } from "../ambassador";
-import { ambassadorReducer } from "./ambassador.reducer";
+import { Ambassador } from '../ambassador';
+import { ambassadorReducer } from './ambassador.reducer';
 
 describe('Ambassador Reducer', () => {
   it('should add an ambassador to the list', () => {

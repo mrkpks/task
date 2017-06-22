@@ -1,4 +1,4 @@
-import { Ambassador } from "./ambassador";
+import { Ambassador } from './ambassador';
 
 export interface AppState {
   readonly ambassadors: Ambassador[];

@@ -1,7 +1,7 @@
-import { Ambassador } from "../ambassador";
-import { SHORTLIST } from "../ambassadors-data";
+import { Ambassador } from '../ambassador';
+import { SHORTLIST } from '../ambassadors-data';
 
-import { Action } from "@ngrx/store";
+import { Action } from '@ngrx/store';
 
 export const ambassadorActions = {
   ADD: 'AMBASSADOR_ADD',

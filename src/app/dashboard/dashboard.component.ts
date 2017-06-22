@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { Router, ActivatedRoute, Params } from "@angular/router";
-import { Ambassador } from "../ambassador";
-import { Store } from "@ngrx/store";
-import { AppState } from "../app.state";
-import { Observable } from "rxjs/Observable";
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import { Ambassador } from '../ambassador';
+import { Store } from '@ngrx/store';
+import { AppState } from '../app.state';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +12,7 @@ import { Observable } from "rxjs/Observable";
 })
 export class DashboardComponent {
 
-  showDetail: boolean = false;
+  showDetail = false;
   ambassadors: Observable<Ambassador[]>;
 
   constructor(private router: Router,
@@ -28,7 +28,7 @@ export class DashboardComponent {
     this.ambassadors = this.store.select('ambassadors');
   }
 
-  onLoadAmbassador(id: number) {
+  onLoadAmbassador(id: number): void {
     this.router.navigateByUrl(`/ambassadors/${id}/detail`);
   }
 }
